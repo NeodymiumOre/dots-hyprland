@@ -21,6 +21,7 @@ import Overview from './modules/overview/main.js';
 import Session from './modules/session/main.js';
 import SideLeft from './modules/sideleft/main.js';
 import SideRight from './modules/sideright/main.js';
+import Test from './modules/test/main.js';
 import { COMPILED_STYLE_DIR } from './init.js';
 
 const range = (length, start = 1) => Array.from({ length }, (_, i) => i + start);
@@ -42,6 +43,7 @@ startBatteryWarningService().catch(print)
 const Windows = () => [
     // forMonitors(DesktopBackground),
     forMonitors(Crosshair),
+    forMonitors(Test),
     Overview(),
     forMonitors(Indicator),
     forMonitors(Cheatsheet),
