@@ -59,7 +59,7 @@ const MultiMonitorHeader = () => Widget.CenterBox({
 const UpdateButton = () => Widget.Button ({
     vpack: 'start',
     hpack: 'end',
-    className: "multimonitor-closebtn icon-material txt txt-hugeass",
+    className: "multimonitor-updatebtn",
     onClicked: () => {
         App.closeWindow('multimonitor');
     },
@@ -76,17 +76,19 @@ export default () => PopupWindow ({
         layer: 'overlay',
         visible: false,
         className: "multimonitor-bg spacing-v-5",
-        // anchor: ['top', 'bottom', 'left', 'right'],
         child: Box({
             vertical: true,
-            // clickCloseRegion({ name: 'multimonitor' }),
             children: [
                 MultiMonitorHeader(),
-                // clickCloseRegion({ name: 'multimonitor' }),
                 Widget.Box({
-                }),
-                UpdateButton(),
-                // clickCloseRegion({ name: 'multimonitor' }),
+                    className: "multimonitor-big-box",
+                    vertical: false,
+                    children: [
+                        UpdateButton(),
+                        UpdateButton(),
+                        UpdateButton(),
+                    ]
+                })
             ]
         }),
 });

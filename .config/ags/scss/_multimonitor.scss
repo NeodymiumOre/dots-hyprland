@@ -14,6 +14,15 @@
     min-height: 2.386rem;
 }
 
+.multimonitor-updatebtn {
+    @include element_decel;
+    border-radius: 0.409rem;
+    min-width: 10rem;
+    min-height: 10rem;
+    background-color: $layer0Hover;
+    margin: 1rem;
+}
+
 .multimonitor-closebtn:hover,
 .multimonitor-closebtn:focus {
     background-color: $layer0Hover;
