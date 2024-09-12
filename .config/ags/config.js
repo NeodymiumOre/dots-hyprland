@@ -43,7 +43,7 @@ startBatteryWarningService().catch(print)
 const Windows = () => [
     // forMonitors(DesktopBackground),
     forMonitors(Crosshair),
-    forMonitors(MultiMonitor),
+    MultiMonitor(),
     Overview(),
     forMonitors(Indicator),
     forMonitors(Cheatsheet),
